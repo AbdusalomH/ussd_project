@@ -58,4 +58,31 @@ final class MainVC: UIViewController {
 
         ])
     }
+    
+    private func configureButtons() {
+        topButtonNavigation.tcell.addTarget(self, action: #selector(goTcellVC), for: .touchUpInside)
+        topButtonNavigation.megafon.addTarget(self, action: #selector(goMegafonVC), for: .touchUpInside)
+        topButtonNavigation.babilon.addTarget(self, action: #selector(gotoBabilonVC), for: .touchUpInside)
+        topButtonNavigation.zmobile.addTarget(self, action: #selector(goToZMobileVC), for: .touchUpInside)
+
+    }
+    
+    @objc private func goTcellVC() {
+        print("tcell")
+    }
+    
+    @objc private func goMegafonVC() {
+        print("megafon")
+    }
+    
+    @objc private func gotoBabilonVC() {
+        print("babilon")
+    }
+    
+    @objc private func goToZMobileVC() {
+        print("zmobile")
+    }
+    
+    
+    
 }
